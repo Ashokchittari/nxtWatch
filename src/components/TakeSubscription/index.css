@@ -1,0 +1,19 @@
+.main-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-image: url('https://assets.ccbp.in/frontend/react-js/nxt-watch-banner-bg.png');
+  background-size: cover;
+  width: 80vw;
+  justify-content: space-between;
+  padding: 20px;
+}
+.xbutton {
+  font-weight: bold;
+  background-color: transparent;
+  font-size: 20px;
+  border: solid 0px;
+}
+.main-logo {
+  height: 40px;
+}

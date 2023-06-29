@@ -1,0 +1,70 @@
+.home-main-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 40vw;
+  align-items: flex-start;
+  padding-top: 102px;
+}
+.left-container {
+  width: 20vw;
+  padding: 20px;
+}
+.link {
+  text-decoration: none;
+}
+.right-container {
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+}
+.icons-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.text {
+  text-decoration: none;
+}
+.light {
+  color: black;
+  background-color: white;
+}
+.dark {
+  color: white;
+  background-color: #0f0f0f;
+}
+.search-container {
+  background-color: #f1f1f1;
+  height: 90vh;
+  padding: 10px;
+}
+.container2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.search-icon {
+  font-size: 21px;
+}
+.search-btn {
+  background-color: transparent;
+  border: solid 0px;
+}
+.failure-img {
+  width: 400px;
+}
+.search-input {
+  width: 300px;
+}
+.videos-list-container {
+  display: flex;
+  margin: 0px;
+  flex-direction: row;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+.right-header-container {
+  width: 100vw;
+  padding-top: 102px;
+}

@@ -1,0 +1,23 @@
+.home-main-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  width: 100vw;
+  align-items: flex-start;
+  padding-top: 102px;
+}
+.left-container {
+  width: 20vw;
+  padding: 20px;
+}
+
+.right-container {
+  width: 80vw;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.video {
+  width: 100%;
+}

@@ -1,0 +1,28 @@
+.thumbnail {
+  width: 290px;
+}
+.list-item {
+  list-style-type: none;
+  width: 290px;
+  margin: 10px;
+  text-decoration: none;
+}
+.channel-img {
+  height: 25px;
+}
+p {
+  font-size: 12px;
+}
+.video-data-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.light {
+  background-color: white;
+}
+.dark {
+  background-color: black;
+}

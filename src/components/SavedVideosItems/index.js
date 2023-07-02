@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom'
 import Context from '../../Context'
 
 const SavedVideosItems = props => {
@@ -5,11 +6,18 @@ const SavedVideosItems = props => {
   return (
     <Context.Consumer>
       {value => {
-        const {isDarkTheme} = value
-        const {publishedAt, title, channel, thumbnailUrl, viewCount} = videoData
-
+        const {isDarkTheme, savedVideos} = value
+        const {
+          publishedAt,
+          title,
+          channel,
+          id,
+          thumbnailUrl,
+          viewCount,
+        } = videoData
+        console.log(savedVideos.includes(videoData))
         return (
-          <li className="home-main-container">
+          <Link to={`/videos/${id}`} className="home-main-container">
             <div className="right-container">
               <img src={thumbnailUrl} alt="video thumbnail" />
             </div>
@@ -19,7 +27,7 @@ const SavedVideosItems = props => {
               <p>{viewCount}</p>
               <p>{publishedAt}</p>
             </div>
-          </li>
+          </Link>
         )
       }}
     </Context.Consumer>

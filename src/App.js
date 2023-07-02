@@ -23,7 +23,13 @@ class App extends Component {
   }
 
   updateSavedVideos = video => {
-    this.setState(prev => ({savedVideos: [...prev.savedVideos, video]}))
+    const {savedVideos} = this.state
+    if (savedVideos.includes(video)) {
+      const updatedList = savedVideos.filter(each => each.id !== video.id)
+      this.setState({savedVideos: updatedList})
+    } else {
+      this.setState(prev => ({savedVideos: [...prev.savedVideos, video]}))
+    }
   }
 
   render() {

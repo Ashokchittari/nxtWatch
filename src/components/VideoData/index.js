@@ -46,10 +46,12 @@ class VideoData extends Component {
     return (
       <Context.Consumer>
         {value => {
-          const {addVideo} = value
+          const {addVideo, savedVideos} = value
           const {videoDataList, channel} = this.state
           const {description, publishedAt, videoUrl, viewCount} = videoDataList
-
+          const savedText = savedVideos.includes(videoDataList)
+            ? 'Saved'
+            : 'Save'
           const updateSavedList = () => {
             console.log('saved')
             addVideo(videoDataList)
@@ -74,7 +76,7 @@ class VideoData extends Component {
                       <button type="button">Like</button>
                       <button type="button">Dislike</button>
                       <button onClick={updateSavedList} type="button">
-                        Save
+                        {savedText}
                       </button>
                     </div>
                     <div>

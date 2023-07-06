@@ -1,5 +1,6 @@
 import {Link} from 'react-router-dom'
 import Context from '../../Context'
+import './index.css'
 
 const SavedVideosItems = props => {
   const {videoData} = props
@@ -15,19 +16,27 @@ const SavedVideosItems = props => {
           thumbnailUrl,
           viewCount,
         } = videoData
-        console.log(savedVideos.includes(videoData))
+        const background = isDarkTheme ? 'dark' : 'light'
         return (
-          <Link to={`/videos/${id}`} className="home-main-container">
-            <div className="right-container">
-              <img src={thumbnailUrl} alt="video thumbnail" />
-            </div>
-            <div>
-              <h1>{title}</h1>
-              <p>{channel.name}</p>
-              <p>{viewCount}</p>
-              <p>{publishedAt}</p>
-            </div>
-          </Link>
+          <li className={`list-item ${background}`}>
+            <Link to={`/videos/${id}`} className={background}>
+              <div className="video-item">
+                <img
+                  src={thumbnailUrl}
+                  className="thumbnail"
+                  alt="video thumbnail"
+                />
+                <div className="video-data-container">
+                  <p>{title}</p>
+                  <p>{channel.name}</p>
+                  <div className="video-data">
+                    <p>{viewCount} views</p>
+                    <p>{publishedAt}</p>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </li>
         )
       }}
     </Context.Consumer>

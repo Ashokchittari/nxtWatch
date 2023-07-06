@@ -14,10 +14,18 @@
 .right-container {
   width: 80vw;
   padding: 30px;
+  margin-left: 20vw;
   display: flex;
   flex-direction: column;
 }
 
 .video {
   width: 100%;
+}
+
+.dark {
+  background-color: black;
+}
+.light {
+  background-color: white;
 }

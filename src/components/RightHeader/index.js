@@ -10,69 +10,74 @@ const RightHeader = () => (
       const {isDarkTheme} = value
       const textColor = isDarkTheme ? 'dark' : 'light'
       return (
-        <div className="left-container">
-          <ul>
-            <li>
-              <Link to="/" className="link">
-                <div className="icons-container">
-                  <AiFillHome className={textColor} />
-                  <p className={`text ${textColor}`}>Home</p>
-                </div>
-              </Link>
-            </li>
-            <li>
-              <Link to="/trending" className="link">
-                <div className="icons-container">
-                  <AiFillFire className={textColor} />
-                  <p className={`text ${textColor}`}>Trending</p>
-                </div>
-              </Link>
-            </li>
-            <li>
-              <Link to="/gaming" className="link">
-                <div className="icons-container">
-                  <IoLogoGameControllerB className={textColor} />
-                  <p className={`text ${textColor}`}>Gaming</p>
-                </div>
-              </Link>
-            </li>
-            <li>
-              <Link to="/saved-videos" className="link">
-                <div className="icons-container">
-                  <AiFillSave className={textColor} />
-                  <p className={`text ${textColor}`}>Saved videos</p>
-                </div>
-              </Link>
-            </li>
-          </ul>
+        <div className={`left-container ${textColor}`}>
           <div>
-            <p>CONTACT US</p>
             <ul>
               <li>
-                <button type="button">
+                <Link to="/" className="link">
+                  <div className="icons-container">
+                    <AiFillHome className={textColor} />
+                    <p className={`text ${textColor}`}>Home</p>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link to="/trending" className="link">
+                  <div className={`icons-container ${textColor}`}>
+                    <AiFillFire />
+                    <p className={`text ${textColor}`}>Trending</p>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link to="/gaming" className="link">
+                  <div className="icons-container">
+                    <IoLogoGameControllerB className={textColor} />
+                    <p className={`text ${textColor}`}>Gaming</p>
+                  </div>
+                </Link>
+              </li>
+              <li>
+                <Link to="/saved-videos" className="link">
+                  <div className="icons-container">
+                    <AiFillSave className={textColor} />
+                    <p className={`text ${textColor}`}>Saved videos</p>
+                  </div>
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p>CONTACT US</p>
+            <div className="unordered-list">
+              <li>
+                <button type="button" className="contact-buttons">
                   <img
                     src="https://assets.ccbp.in/frontend/react-js/nxt-watch-facebook-logo-img.png"
                     alt="facebook logo"
+                    className="contact-logo"
                   />
                 </button>
               </li>
               <li>
-                <button type="button">
+                <button type="button" className="contact-buttons">
                   <img
                     src="https://assets.ccbp.in/frontend/react-js/nxt-watch-twitter-logo-img.png"
                     alt="twitter logo"
+                    className="contact-logo"
                   />
                 </button>
               </li>
               <li>
-                <button type="button">
+                <button type="button" className="contact-buttons">
                   <img
                     src="https://assets.ccbp.in/frontend/react-js/nxt-watch-linked-in-logo-img.png"
                     alt="linked in logo"
+                    className="contact-logo"
                   />
                 </button>
               </li>
-            </ul>
+            </div>
             <p>Enjoy! Now to see your channels and recommendations!</p>
           </div>
         </div>

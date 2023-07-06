@@ -1,9 +1,9 @@
 .thumbnail {
-  width: 290px;
+  width: 240px;
 }
 .list-item {
   list-style-type: none;
-  width: 290px;
+  width: 250px;
   margin: 10px;
   text-decoration: none;
 }
@@ -22,7 +22,9 @@ p {
 
 .light {
   background-color: white;
+  text-decoration: none;
 }
 .dark {
   background-color: black;
+  text-decoration: none;
 }

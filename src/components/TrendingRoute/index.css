@@ -62,7 +62,6 @@
   margin: 0px;
   flex-direction: row;
   justify-content: left;
-  flex-wrap: wrap;
 }
 .right-header-container {
   width: 100vw;

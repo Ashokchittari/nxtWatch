@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom'
 import Context from '../../Context'
 import './index.css'
 
-const VideoItem = props => (
+const TrendingVideoItem = props => (
   <Context.Consumer>
     {value => {
       const {isDarkTheme} = value
@@ -20,23 +20,16 @@ const VideoItem = props => (
       return (
         <li className={`list-item ${background}`}>
           <Link to={`/videos/${id}`} className={background}>
-            <img
-              src={thumbnailUrl}
-              className="thumbnail"
-              alt="video thumbnail"
-            />
-            <div className="video-data-container">
-              <div>
-                <img
-                  className="channel-img"
-                  src={channel.profile_image_url}
-                  alt="channel logo"
-                />
-              </div>
-              <div>
+            <div className="video-item">
+              <img
+                src={thumbnailUrl}
+                className="thumbnail"
+                alt="video thumbnail"
+              />
+              <div className="video-data-container">
                 <p>{title}</p>
                 <p>{channel.name}</p>
-                <div>
+                <div className="video-data">
                   <p>{viewCount} views</p>
                   <p>{publishedAt}</p>
                 </div>
@@ -49,4 +42,4 @@ const VideoItem = props => (
   </Context.Consumer>
 )
 
-export default VideoItem
+export default TrendingVideoItem

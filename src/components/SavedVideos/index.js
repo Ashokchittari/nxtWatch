@@ -3,6 +3,7 @@ import Header from '../Header'
 import RightHeader from '../RightHeader'
 import Empty from '../EmptyViewSaved'
 import SavedVideosItems from '../SavedVideosItems'
+import './index.css'
 
 const SavedVideos = () => {
   const renderVideosListView = videosData =>

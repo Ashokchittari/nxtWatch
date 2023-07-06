@@ -1,7 +1,7 @@
 import {Component} from 'react'
 import Cookie from 'js-cookie'
 import Loader from 'react-loader-spinner'
-import VideoItem from '../VideoItem'
+import TrendingVideoItem from '../trendingVideoItem'
 import Context from '../../Context'
 import Header from '../Header'
 import RightHeader from '../RightHeader'
@@ -74,7 +74,9 @@ class TrendingRoute extends Component {
 
   renderVideosListView = () => {
     const {videosData} = this.state
-    return videosData.map(each => <VideoItem videoData={each} key={each.id} />)
+    return videosData.map(each => (
+      <TrendingVideoItem videoData={each} key={each.id} />
+    ))
   }
 
   renderAllVideos = isDarkTheme => {

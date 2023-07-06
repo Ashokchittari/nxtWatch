@@ -46,25 +46,26 @@ class VideoData extends Component {
     return (
       <Context.Consumer>
         {value => {
-          const {addVideo, savedVideos} = value
+          const {addVideo, isDarkTheme, savedVideos} = value
           const {videoDataList, channel} = this.state
           const {description, publishedAt, videoUrl, viewCount} = videoDataList
           const savedText = savedVideos.includes(videoDataList)
             ? 'Saved'
             : 'Save'
+          const theme = isDarkTheme ? 'dark' : 'light'
           const updateSavedList = () => {
             console.log('saved')
             addVideo(videoDataList)
           }
 
           return (
-            <div>
+            <div className={theme}>
               <Header />
               <div className="home-main-container">
                 <div className="left-container">
                   <RightHeader />
                 </div>
-                <div className="right-container">
+                <div className={`right-container ${theme}`}>
                   <ReactPlayer url={videoUrl} width="80%" />
                   <p>{description}</p>
                   <div>
